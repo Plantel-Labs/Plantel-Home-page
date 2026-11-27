@@ -20,6 +20,7 @@ const rows = [
 ['Horário de Brasília','Brasília time','Hora de Brasilia'],
 ['Seu próximo objetivo começa aqui.','Your next goal starts here.','Tu próximo objetivo empieza aquí.'],
 ['Confira o calendário e acompanhe as novas datas.','Explore the calendar and keep up with new dates.','Consulta el calendario y las nuevas fechas.'],
+['Calendário de concursos','Exam calendar','Calendario de exámenes'],
 ['Calendário de concursos | Plantel','Exam calendar | Plantel','Calendario de exámenes | Plantel'],
 ['Plantel de Dúvidas | Comunidade de estudos','Plantel de Dúvidas | Learning community','Plantel de Dúvidas | Comunidad de estudio'],
 ['Voltar ao Plantel','Back to Plantel','Volver a Plantel'],

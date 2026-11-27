@@ -16,6 +16,21 @@ export const exams = [
   { id: 'eam', name: 'EAM', edition: t("Próxima edição"), branch: t("Marinha"), description: t("Escolas de Aprendizes-Marinheiros"), stage: t("Prova objetiva"), date: null, source: 'https://www.marinha.mil.br/eames/concurso/escolas-de-aprendizes-marinheiros' },
 ];
 
+export const examLogos = {
+  ime: 'ime.png',
+  ita: 'ita.png',
+  afa: 'afa.png',
+  en: 'escola-naval.png',
+  efomm: 'efomm.png',
+  esa: 'esa-logo-clean.png',
+  espcex: 'espcex-logo.png',
+  eear1: 'eear-logo-clean.png',
+  eear2: 'eear-logo-clean.png',
+  epcar: 'epcar-logo.svg',
+  cn: 'colegio-naval-logo.png',
+  eam: 'eam-logo.png',
+};
+
 export function remaining(date, now) {
   const seconds = Math.max(0, Math.floor((new Date(date).getTime() - now) / 1000));
   return [Math.floor(seconds / 86400), Math.floor(seconds / 3600) % 24, Math.floor(seconds / 60) % 60, seconds % 60];

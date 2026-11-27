@@ -28,18 +28,6 @@ const parceiros = [
     label: t("Mentoria de Redação, prof. Thay Puppin"),
     imageSrc: "/Logo_parceiros/logo-puppin.png",
   },
-  {
-    id: "omp",
-    name: "OMP - O Método Português",
-    links: [
-      { label: "TURMA DE EXERCÍCIOS - MENSAL", href: "https://pay.kiwify.com.br/uqp1u1b?afid=yyT4wqyg" },
-      { label: "TURMA DE EXERCÍCIOS - ANUAL", href: "https://pay.kiwify.com.br/XMD8PA3?afid=yyT4wqyg" },
-    ],
-    className: "logo-parceiros logo-omp",
-    label: "OMP - O Método Português · Turmas de exercícios",
-    imageSrc: "/efomm/assets/omp-logo.png",
-  },
-  
 ];
 
 import { ArrowUpRight } from "lucide-react";

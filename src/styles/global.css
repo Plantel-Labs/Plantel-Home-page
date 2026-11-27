@@ -277,6 +277,88 @@ header {
   .hero::before { top: -120px; }
 }
 
+.hero-exam-carousel {
+  position: relative;
+  background: var(--white);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 10%);
+}
+
+.hero-exam-window {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 clamp(28px, 7vw, 110px), #000 calc(100% - clamp(28px, 7vw, 110px)), transparent);
+}
+
+.hero-exam-track {
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  animation: hero-exam-scroll 36s linear infinite;
+}
+
+.hero-exam-track[data-paused="true"],
+.hero-exam-window:hover .hero-exam-track {
+  animation-play-state: paused;
+}
+
+@keyframes hero-exam-scroll {
+  to { transform: translateX(-50%); }
+}
+
+.hero-exam-logos {
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 12px 0;
+  list-style: none;
+}
+
+.hero-exam-logos li {
+  flex: 1 0 auto;
+  display: grid;
+  place-items: center;
+  padding-inline: clamp(10px, 2vw, 24px);
+}
+
+.hero-exam-logos img {
+  display: block;
+  width: 72px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.hero-exam-toggle {
+  position: absolute;
+  right: 8px;
+  bottom: 6px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid color-mix(in srgb, var(--text-dark) 20%, transparent);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-exam-window {
+    overflow-x: auto;
+    mask-image: none;
+  }
+
+  .hero-exam-track {
+    min-width: 100%;
+    animation: none;
+  }
+
+  .hero-exam-logos[aria-hidden="true"],
+  .hero-exam-toggle {
+    display: none;
+  }
+}
+
 .title h1 {
   font-family: "Pathway Gothic One", sans-serif;
   font-size: clamp(3rem, 10vw, 5rem);
@@ -720,17 +802,6 @@ header {
 .hero-parceiro[data-parceiro="puppin"] {
   background-image: var(--gradient-overlay), url("/fundo_parceiros/puppin.png");
   background-position: center -25px;
-}
-
-.hero-parceiro[data-parceiro="omp"] {
-  background-image: var(--gradient-overlay), linear-gradient(135deg, #070707, #252525);
-  background-position: center;
-}
-
-.logo-omp {
-  background: #000;
-  object-fit: contain;
-  padding: 12px;
 }
 
 .hero-parceiro[data-parceiro="mobius"] {
